@@ -1,3 +1,5 @@
+import { FaDownload } from "react-icons/fa";
+
 const Navbar = () => {
 	const scrollTo = (id) => {
 		const section = document.getElementById(id);
@@ -28,13 +30,13 @@ const Navbar = () => {
 		</>
 	);
 	return (
-		<div className='navbar max-w-7xl mx-auto px-4'>
+		<div className='navbar max-w-7xl mx-auto px-10'>
 			<div className='navbar-start'>
 				<div className='dropdown'>
 					<div
 						tabIndex={0}
 						role='button'
-						className='btn btn-ghost lg:hidden'
+						className='btn btn-ghost pl-0 lg:hidden'
 					>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -70,7 +72,9 @@ const Navbar = () => {
 				<ul className='menu menu-horizontal px-1'>{links}</ul>
 			</div>
 			<div className='navbar-end'>
-				<a className='btn btn-primary rounded'>Download CV</a>
+				<a className='btn btn-primary rounded'>
+					<FaDownload /> Download CV
+				</a>
 			</div>
 		</div>
 	);
