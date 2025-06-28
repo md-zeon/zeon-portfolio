@@ -68,7 +68,7 @@ const Hero = () => {
 				transition={{ duration: 0.8, delay: 0.2 }}
 				className='w-full md:w-1/2 flex justify-center mb-10 md:mb-0'
 			>
-				<div className='relative group'>
+				<div className='relative group -scale-x-100'>
 					<img
 						src={heroImage}
 						loading='lazy'
