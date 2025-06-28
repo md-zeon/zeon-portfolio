@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
+import Education from "../components/Education";
 
 const Home = () => {
 	const { scrollYProgress } = useScroll();
@@ -24,6 +25,7 @@ const Home = () => {
 				<Hero />
 				<About />
 				<Skills />
+				<Education />
 			</main>
 			<footer className='min-h-screen bg-primary'></footer>
 		</>
