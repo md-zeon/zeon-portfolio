@@ -1,1 +1,22 @@
 @import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+	name: "light";
+	default: true;
+	--color-primary: "#F6C945";
+	--color-secondary: "#C084FC";
+	--color-base: "#0F0F0F";
+	--color-text: "#E5E7EB";
+}
+@plugin "daisyui/theme" {
+    name: "dark";
+    --color-primary: "#F6C945";
+    --color-secondary: "#C084FC";
+    --color-base: "#0F0F0F";
+    --color-text: "#E5E7EB";
+}
+
+body {
+  @apply bg-base text-text;
+  font-family: 'Inter', sans-serif;
+}
