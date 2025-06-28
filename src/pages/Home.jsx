@@ -2,6 +2,7 @@ import { motion, useScroll } from "motion/react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Skills from "../components/Skills";
 
 const Home = () => {
 	const { scrollYProgress } = useScroll();
@@ -14,7 +15,7 @@ const Home = () => {
 					originX: 0,
 					zIndex: 9999,
 				}}
-				className="bg-primary fixed top-0 left-0 right-0 h-1"
+				className='bg-primary fixed top-0 left-0 right-0 h-1'
 			></motion.div>
 			<header className='bg-base-200 text-base-content sticky top-0 z-50'>
 				<Navbar />
@@ -22,6 +23,7 @@ const Home = () => {
 			<main className='bg-base-100 text-base-content min-h-screen max-w-7xl mx-auto px-4'>
 				<Hero />
 				<About />
+				<Skills />
 			</main>
 			<footer className='min-h-screen bg-primary'></footer>
 		</>
