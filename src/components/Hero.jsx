@@ -15,7 +15,7 @@ const Hero = () => {
 				transition={{ duration: 0.8, delay: 0.1 }}
 				className='w-full md:w-1/2 text-center md:text-left space-y-2 sm:space-y-4'
 			>
-				<h1 className='text-4xl sm:text-5xl font-extrabold text-primary'>Hi, I'm Zeon</h1>
+				<h1 className='text-4xl sm:text-5xl font-extrabold text-gradient-primary'>Hi, I'm Zeon</h1>
 				<h2 className='text-2xl font-semibold text-secondary'>Full Stack Web Developer</h2>
 				<p className='text-secondary-content max-w-md mx-auto md:mx-0'>
 					I build scalable and dynamic web applications using modern technologies like React, Node.js, and MongoDB. I
@@ -28,7 +28,7 @@ const Hero = () => {
 						href='https://github.com/md-zeon'
 						target='_blank'
 						rel='noopener noreferrer'
-						className='hover:text-primary'
+						className='hover:text-gradient-primary'
 					>
 						<FaGithub />
 					</a>
@@ -36,13 +36,13 @@ const Hero = () => {
 						href='https://linkedin.com/in/yourusername'
 						target='_blank'
 						rel='noopener noreferrer'
-						className='hover:text-primary'
+						className='hover:text-gradient-primary'
 					>
 						<FaLinkedin />
 					</a>
 					<a
 						href='mailto:zeon.cse@email.com'
-						className='hover:text-primary'
+						className='hover:text-gradient-primary'
 					>
 						<FaEnvelope />
 					</a>

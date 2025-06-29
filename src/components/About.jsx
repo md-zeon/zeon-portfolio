@@ -35,10 +35,10 @@ const About = () => {
 					transition={{ duration: 0.8, delay: 0.2 }}
 					className='w-full md:w-1/2 md:border-l-4 md:border-primary pl-4 space-y-6 text-center md:text-left'
 				>
-					<h2 className='text-3xl sm:text-4xl font-bold text-primary'>About Me</h2>
+					<h2 className='text-3xl sm:text-4xl font-bold text-gradient-primary'>About Me</h2>
 
 					<p className='text-secondary-content leading-relaxed max-w-xl'>
-						👋 I'm <span className='font-semibold text-primary'>Zeon</span>, a passionate full-stack developer from
+						👋 I'm <span className='font-semibold text-gradient-primary'>Zeanur Rahaman Zeon</span>, a passionate full-stack developer from
 						Bangladesh. I specialize in building interactive, user-friendly web applications using the MERN stack
 						(MongoDB, Express.js, React, Node.js).
 					</p>

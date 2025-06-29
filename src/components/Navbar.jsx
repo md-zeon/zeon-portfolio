@@ -63,7 +63,7 @@ const Navbar = () => {
 				</div>
 				<a
 					href='#'
-					className='text-xl text-primary font-black'
+					className='text-xl text-gradient-primary font-black'
 				>
 					Zeon.
 				</a>

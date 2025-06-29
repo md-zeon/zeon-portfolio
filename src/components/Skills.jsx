@@ -60,7 +60,7 @@ const Skills = () => {
 			id='skills'
 			className='py-16 md:py-24 bg-base-200'
 		>
-			<h2 className='text-4xl font-extrabold text-center text-primary mb-12'>Skills</h2>
+			<h2 className='text-4xl font-extrabold text-center text-gradient-primary mb-12'>Skills</h2>
 
 			<SkillRow
 				reverse={false}
