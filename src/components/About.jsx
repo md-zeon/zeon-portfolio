@@ -1,68 +1,168 @@
-import aboutImg from "../assets/zeon.jpg";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
+import { FaChess } from "react-icons/fa";
+import { LuCode, LuHeart, LuGamepad2, LuMusic } from "react-icons/lu";
 
 const About = () => {
+	const interests = [
+		{ icon: LuCode, label: "Coding", description: "Building full-stack apps" },
+		{ icon: LuGamepad2, label: "Gaming", description: "Mostly strategy and RPGs" },
+		{ icon: LuMusic, label: "Music", description: "Lo-fi, chillhop, and game OSTs" },
+		{ icon: FaChess, label: "Chess", description: "Helps me think ahead" },
+	];
+
 	return (
 		<section
 			id='about'
-			className='px-6 py-12 md:px-16 md:py-20'
+			className='py-20 bg-card/50'
 		>
-			<div className='flex flex-col md:flex-row items-center gap-10'>
-				{/* Left Image */}
+			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<motion.div
-					initial={{ opacity: 0, x: -50 }}
-					whileInView={{ opacity: 1, x: 0 }}
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.8 }}
-					className='w-full md:w-1/2 flex md:justify-start justify-center'
+					className='text-center mb-16'
 				>
-					<div className='relative group'>
-						<img
-							src={aboutImg}
-							alt='Zeon profile'
-							loading='lazy'
-							className='w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-xl object-cover border-4 border-primary/70 shadow-xl group-hover:scale-105 transition-all duration-500'
-						/>
-						<div className='absolute inset-0 border-4 border-primary animate-pulse z-[1] rounded-xl group-hover:scale-105 transition-all duration-500'></div>
-					</div>
+					<h2 className='text-4xl lg:text-5xl font-bold text-foreground mb-4'>About Me</h2>
+					<p className='text-xl text-muted-foreground max-w-3xl mx-auto'>
+						Passionate about creating digital experiences that make a difference
+					</p>
 				</motion.div>
 
-				{/* Right Content */}
-				<motion.div
-					initial={{ opacity: 0, x: 50 }}
-					whileInView={{ opacity: 1, x: 0 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.8, delay: 0.2 }}
-					className='w-full md:w-1/2 md:border-l-4 md:border-primary pl-4 space-y-6 text-center md:text-left'
-				>
-					<h2 className='text-3xl sm:text-4xl font-bold text-gradient-primary'>About Me</h2>
+				<div className='grid lg:grid-cols-2 gap-16 items-start'>
+					{/* Left Content */}
+					<motion.div
+						initial={{ opacity: 0, x: -50 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.8 }}
+						className='space-y-8'
+					>
+						<div className='space-y-6'>
+							<div className='bg-card border border-border rounded-xl p-6'>
+								<h3 className='text-xl font-bold text-primary mb-3 flex items-center gap-2'>
+									<LuCode className='w-5 h-5' />
+									My Programming Journey
+								</h3>
+								<p className='text-foreground leading-relaxed mb-4'>
+									👋 I'm <span className='font-bold text-primary'>Zeanur Rahaman Zeon</span>, a passionate full-stack
+									developer from Bangladesh. My coding journey began during my first year at Northern University with
+									with C++ and Data Structures & Algorithms which built my problem-solving foundation.
+								</p>
+								<p className='text-foreground leading-relaxed'>
+									In my second year, I got into web development to see how those concepts could be applied visually.
+									Then I discovered the magic of turning ideas into interactive web applications. That's when I
+									discovered the MERN stack — and I've been hooked ever since.
+								</p>
+							</div>
 
-					<p className='text-secondary-content leading-relaxed max-w-xl'>
-						👋 I'm <span className='font-semibold text-gradient-primary'>Zeanur Rahaman Zeon</span>, a passionate full-stack developer from
-						Bangladesh. I specialize in building interactive, user-friendly web applications using the MERN stack
-						(MongoDB, Express.js, React, Node.js).
-					</p>
+							<div className='bg-card border border-border rounded-xl p-6'>
+								<h3 className='text-xl font-bold text-primary mb-3 flex items-center gap-2'>
+									<LuHeart className='w-5 h-5' />
+									What I Love Doing
+								</h3>
+								<p className='text-foreground leading-relaxed mb-4'>
+									I enjoy building things that feel useful. It feels great to make something that others can actually
+									use.
+								</p>
+								<p className='text-foreground leading-relaxed'>
+									I like working across both frontend and backend because it gives me full control of the product.
+									Seeing an idea go from concept to reality is what keeps me motivated.
+								</p>
+							</div>
 
-					<p className='text-secondary-content leading-relaxed max-w-xl'>
-						I'm currently a CSE student at Northern University, learning full-stack web development alongside my
-						academic studies. I spend most of my time working on projects, practicing DSA, and strengthening my
-						problem-solving skills.
-					</p>
+							<div className='bg-card border border-border rounded-xl p-6'>
+								<h3 className='text-xl font-bold text-primary mb-3'>Beyond the Code</h3>
+								<p className='text-foreground leading-relaxed mb-4'>
+									When I'm not immersed in code, you'll find me focusing on my academic studies and sometimes you might
+									see me doing part time tuition. It keeps me balanced and helps me manage time better
+								</p>
+								<p className='text-foreground leading-relaxed'>
+									In my free time, I enjoy music, games, anime, and chess — they help me relax and stay creative. These
+									hobbies give me a break and often shape how I approach problems.
+								</p>
+							</div>
+						</div>
 
-					<p className='text-secondary-content leading-relaxed max-w-xl'>
-						When I'm not coding, I enjoy exploring open-source projects, teaching junior students, and learning deeper
-						concepts in computer science fundamentals.
-					</p>
-
-					<div className='mt-6'>
-						<a
-							href='#contact'
-							className='btn btn-outline btn-primary'
+						<motion.button
+							whileHover={{ scale: 1.05 }}
+							whileTap={{ scale: 0.95 }}
+							onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+							className='gradient-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-200'
 						>
 							Let's Connect
-						</a>
-					</div>
-				</motion.div>
+						</motion.button>
+					</motion.div>
+
+					{/* Right Content */}
+					<motion.div
+						initial={{ opacity: 0, x: 50 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.8, delay: 0.2 }}
+						className='space-y-8'
+					>
+						{/* Interests */}
+						<div className='bg-card border border-border rounded-xl p-6'>
+							<h3 className='text-xl font-bold text-primary mb-6'>My Interests</h3>
+							<div className='grid grid-cols-2 gap-4'>
+								{interests.map(({ icon: Icon, label, description }, index) => (
+									<motion.div
+										key={label}
+										initial={{ opacity: 0, scale: 0.9 }}
+										whileInView={{ opacity: 1, scale: 1 }}
+										viewport={{ once: true }}
+										transition={{ delay: index * 0.1 }}
+										whileHover={{ scale: 1.05 }}
+										className='text-center p-4 rounded-lg bg-background/50 border border-border/50 hover:border-primary/30 transition-all duration-200'
+									>
+										<Icon className='w-6 h-6 text-primary mx-auto mb-2' />
+										<h4 className='font-semibold text-foreground text-sm mb-1'>{label}</h4>
+										<p className='text-muted-foreground text-xs'>{description}</p>
+									</motion.div>
+								))}
+							</div>
+						</div>
+						<motion.div
+							initial={{ opacity: 0, scale: 0.9 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.5 }}
+							className='bg-card border border-border rounded-xl p-6 flex flex-col justify-between h-full'
+						>
+							<div>
+								<h3 className='text-xl font-bold text-primary mb-4'>Coming Soon</h3>
+								<p className='text-muted-foreground text-sm leading-relaxed'>
+									This space is reserved for a timeline, featured achievements, or something fun. I’m still deciding
+									what makes the most impact here.
+								</p>
+							</div>
+
+							<div className='mt-6'>
+								<a
+									href='#contact'
+									className='text-sm text-primary hover:underline transition duration-150'
+								>
+									Got ideas? Let's chat →
+								</a>
+							</div>
+						</motion.div>
+
+						{/* Quote */}
+						<motion.div
+							initial={{ opacity: 0, scale: 0.9 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.5 }}
+							className='bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-xl p-6 text-center'
+						>
+							<p className='text-foreground italic text-lg mb-3'>
+								"Programs must be written for people to read, and only incidentally for machines to execute."
+							</p>
+							<p className='text-muted-foreground text-sm'>- Harold Abelson</p>
+						</motion.div>
+					</motion.div>
+				</div>
 			</div>
 		</section>
 	);
