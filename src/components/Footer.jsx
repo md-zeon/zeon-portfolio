@@ -94,7 +94,7 @@ const Footer = () => {
 						<div className='space-y-2 text-gray-400'>
 							<p>zeon.cse@email.com</p>
 							<p>Dhaka, Bangladesh</p>
-							<p>Available for freelance opportunities</p>
+							<p>Available for Work opportunities</p>
 						</div>
 					</motion.div>
 				</div>

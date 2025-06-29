@@ -25,7 +25,7 @@ const Home = () => {
 			<header className='bg-gradient-to-r from-primary/10 to-accent/20 border border-primary/20 sticky top-0 z-50'>
 				<Navbar />
 			</header>
-			<main className='bg-base-100 text-base-content min-h-screen max-w-7xl mx-auto px-4'>
+			<main className='gradient-bg  text-base-content min-h-screen max-w-7xl mx-auto px-4'>
 				<Hero />
 				<About />
 				<Skills />
