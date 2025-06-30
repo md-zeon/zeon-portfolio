@@ -100,7 +100,7 @@ const Footer = () => {
 				</div>
 
 				{/* Bottom Section */}
-				<div className='mt-12 pt-8 border-t border-gray-800 flex flex-col justify-center items-center text-center gap-4'>
+				<div className='relative mt-12 pt-8 border-t border-gray-800 flex flex-col justify-center items-center text-center gap-4'>
 					<p>
 						© {new Date().getFullYear()} All rights reserved. Made with{" "}
 						<LuHeart className='w-4 h-4 text-primary inline' /> by
@@ -116,7 +116,7 @@ const Footer = () => {
 						transition={{ duration: 0.8, delay: 0.4 }}
 						whileHover={{ scale: 1.1, y: -2 }}
 						whileTap={{ scale: 0.9 }}
-						className='w-10 h-10 animate-float gradient-primary rounded-lg flex items-center justify-center text-white hover:shadow-lg transition-all duration-200 cursor-pointer'
+						className='absolute right-4 -top-14 w-10 h-10 animate-float gradient-primary rounded-lg flex items-center justify-center text-white hover:shadow-lg transition-all duration-200 cursor-pointer'
 					>
 						<LuArrowUp className='w-5 h-5' />
 					</motion.button>

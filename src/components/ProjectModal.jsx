@@ -10,7 +10,7 @@ const ProjectModal = ({ project, onClose }) => {
 		>
 			<div className='modal-box w-full !max-w-screen'>
 				{/* Header */}
-				<div className='flex items-center justify-between p-6 border-b bg-card/50'>
+				<div className='flex items-center justify-between p-6 border-b'>
 					<div className='flex items-center gap-3'>
 						<div className='flex items-center gap-2 bg-primary/10 px-3 py-1 rounded-full'>
 							<LuTag className='w-3 h-3 text-gradient-primary' />
@@ -58,7 +58,7 @@ const ProjectModal = ({ project, onClose }) => {
 										href={project.liveUrl}
 										target='_blank'
 										rel='noopener noreferrer'
-										className='flex items-center gap-2 gradient-primary text-gradient-primary-foreground px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-200'
+										className='flex items-center gap-2 gradient-primary px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-200'
 									>
 										<LuExternalLink className='w-4 h-4' />
 										<span>Live Demo</span>
@@ -68,7 +68,7 @@ const ProjectModal = ({ project, onClose }) => {
 						</div>
 
 						{/* Tech Stack */}
-						<div className='bg-card border rounded-xl p-6'>
+						<div className='border rounded-xl p-6'>
 							<h2 className='text-xl font-bold  mb-6'>Technology Stack</h2>
 							<div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
 								{Object.entries(project.techStack).map(([category, techs]) => (
@@ -91,7 +91,7 @@ const ProjectModal = ({ project, onClose }) => {
 
 						{/* Challenges & Improvements */}
 						<div className='grid lg:grid-cols-2 gap-8'>
-							<div className='bg-card border rounded-xl p-6'>
+							<div className='border rounded-xl p-6'>
 								<h2 className='text-xl font-bold  mb-4 flex items-center gap-2'>
 									<LuLightbulb className='w-5 h-5 text-gradient-primary' />
 									Challenges Faced
@@ -108,7 +108,7 @@ const ProjectModal = ({ project, onClose }) => {
 									))}
 								</ul>
 							</div>
-							<div className='bg-card border rounded-xl p-6'>
+							<div className='border rounded-xl p-6'>
 								<h2 className='text-xl font-bold  mb-4 flex items-center gap-2'>
 									<LuTarget className='w-5 h-5 text-gradient-primary' />
 									Future Improvements

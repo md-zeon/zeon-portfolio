@@ -20,12 +20,12 @@ const Home = () => {
 					originX: 0,
 					zIndex: 9999,
 				}}
-				className='bg-primary fixed top-0 left-0 right-0 h-1'
+				className='gradient-primary fixed top-0 left-0 right-0 h-1'
 			></motion.div>
 			<header className='bg-gradient-to-r from-primary/10 to-accent/20 border border-primary/20 sticky top-0 z-50'>
 				<Navbar />
 			</header>
-			<main className='gradient-bg  text-base-content min-h-screen max-w-7xl mx-auto px-4'>
+			<main className='text-base-content min-h-screen max-w-7xl mx-auto'>
 				<Hero />
 				<About />
 				<Skills />

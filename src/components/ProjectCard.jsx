@@ -38,7 +38,7 @@ const ProjectCard = ({ project, index, onClick }) => {
 							whileTap={{ scale: 0.95 }}
 							className='w-10 h-10 gradient-primary rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200'
 						>
-							<LuExternalLink className='w-4 h-4 text-gradient-primary-foreground' />
+							<LuExternalLink className='w-4 h-4' />
 						</motion.a>
 					</div>
 				</div>
@@ -67,7 +67,7 @@ const ProjectCard = ({ project, index, onClick }) => {
 						{project.technologies.slice(0, 5).map((tech) => (
 							<span
 								key={tech}
-								className='px-4 py-2 bg-neutral/60  rounded-lg text-sm font-medium border hover:bg-primary/10 hover:border-primary/20 transition-all duration-200'
+								className='px-4 py-2 bg-neutral/60  rounded-lg text-sm font-medium border hover:gradient-primary/10 hover:border-primary/20 transition-all duration-200'
 							>
 								{tech}
 							</span>
@@ -81,7 +81,7 @@ const ProjectCard = ({ project, index, onClick }) => {
 
 					<button
 						onClick={onClick}
-						className='btn flex-1 flex items-center justify-center cursor-pointer gap-2 bg-primary text-gradient-primary-foreground px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-200 group'
+						className='btn flex-1 flex items-center justify-center cursor-pointer gap-2 gradient-primary px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-200 group'
 					>
 						<LuEye className='w-4 h-4' />
 						<span>View Details</span>

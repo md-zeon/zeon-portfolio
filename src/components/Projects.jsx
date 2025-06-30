@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
+import { LuGithub } from "react-icons/lu";
 
 const projects = [
 	{
@@ -98,33 +99,34 @@ const projects = [
 		},
 	},
 	{
-		title: "Blog CMS Platform",
-		description: "A content management system for bloggers with rich text editor, image uploads, and SEO optimization.",
-		image: "https://images.unsplash.com/photo-1486312338219-ce68e2c6767d?w=500&h=300&fit=crop",
-		technologies: ["React", "Node.js", "MongoDB", "JWT", "Cloudinary"],
-		githubUrl: "https://github.com/md-zeon/blog-cms",
-		liveUrl: "https://example-blog.com",
-		date: "2023",
+		title: "Taskero",
+		description:
+			"A full-stack MERN freelance task marketplace with user authentication, task management, and a dashboard.",
+		image: "https://i.ibb.co/d4LBMqHp/taskero.png",
+		technologies: ["React", "Node.js", "MongoDB", "Express", "Firebase Auth", "Tailwind CSS"],
+		githubUrl: "https://github.com/md-zeon/taskero-client-side",
+		liveUrl: "https://taskero-60a20.web.app/",
+		date: "2025-06",
 		category: "Full Stack",
 		fullDescription:
-			"A powerful content management system designed for bloggers and content creators. Features include a rich text editor with markdown support, media management with Cloudinary integration, SEO optimization tools, comment system, user management, analytics dashboard, and customizable themes. The platform supports multiple authors and has a comprehensive admin panel.",
+			"Taskero is a full-stack freelance task marketplace built with the MERN stack. It enables users to browse, post, and manage tasks, with protected authentication routes, a responsive design, and an admin-style dashboard. Features include task CRUD operations, private dashboards, deadline-based sorting, and real-time updates using Firebase Auth.",
 		challenges: [
-			"Building a feature-rich text editor with custom formatting options",
-			"Implementing efficient SEO optimization and meta tag management",
-			"Creating a flexible theming system for different blog styles",
-			"Managing large media files and optimizing load times",
+			"Implementing protected routes and role-based access using Firebase Auth",
+			"Creating responsive and consistent UI across desktop and mobile using Tailwind CSS and DaisyUI",
+			"Building a custom dashboard layout with dynamic routing and nested routes",
+			"Managing user-specific task filtering and secure backend data access",
 		],
 		improvements: [
-			"Add AI-powered content suggestions and writing assistance",
-			"Implement advanced analytics and reader engagement metrics",
-			"Add newsletter integration and email marketing tools",
-			"Create mobile app for content creation on the go",
+			"Add bidding system for freelancers",
+			"Implement real-time task updates with WebSockets",
+			"Add role-based admin moderation features",
+			"Build a mobile app version with offline access",
 		],
 		techStack: {
-			frontend: ["React.js", "Quill.js", "React Router", "Axios"],
-			backend: ["Node.js", "Express.js", "Passport.js", "Nodemailer"],
-			database: ["MongoDB", "Mongoose"],
-			tools: ["Cloudinary", "JWT", "Helmet.js", "Rate Limiting"],
+			frontend: ["React.js", "React Router", "Tailwind CSS", "DaisyUI", "Framer Motion", "React Typewriter"],
+			backend: ["Node.js", "Express.js", "CORS", "Dotenv"],
+			database: ["MongoDB", "Mongoose ODM"],
+			tools: ["Firebase Auth", "Vercel", "SweetAlert2", "React Toastify", "Git"],
 		},
 	},
 ];
@@ -145,9 +147,9 @@ const Projects = () => {
 	return (
 		<section
 			id='projects'
-			className='py-20 bg-background'
+			className='py-20 gradient-bg'
 		>
-			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+			<div className='px-4 sm:px-6 lg:px-8'>
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -175,8 +177,8 @@ const Projects = () => {
 							className={`px-6 py-3 border rounded-full transition-all duration-200 font-medium shadow-sm
                 ${
 									activeCategory === category
-										? "bg-primary text-gradient-primary-foreground border-primary"
-										: "bg-card hover:border-primary hover:text-gradient-primary hover:bg-primary/5"
+										? "gradient-primary border-primary"
+										: "hover:border-primary hover:text-gradient-primary hover:gradient-primary/5"
 								}
               `}
 						>
@@ -203,8 +205,19 @@ const Projects = () => {
 					transition={{ duration: 0.8, delay: 0.5 }}
 					className='text-center mt-16'
 				>
-					<button className='gradient-primary text-gradient-primary-foreground px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-200'>
-						View All Projects
+					<button className='gradient-primary px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-200 cursor-pointer active:scale-95'>
+						<a
+							href='https://github.com/md-zeon/'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='flex justify-center items-center gap-2 w-fit'
+						>
+							<LuGithub
+								size={30}
+								className='p-2 rounded-full border'
+							/>
+							View All Projects
+						</a>
 					</button>
 				</motion.div>
 			</div>
@@ -215,6 +228,59 @@ const Projects = () => {
 					onClose={() => document.getElementById("my_modal_5").close()}
 				/>
 			)}
+
+			{/* Enhanced Floating Elements */}
+			<div className='mt-20 relative'>
+				<motion.div
+					animate={{
+						y: [0, -30, 0],
+						rotate: [0, 10, 0],
+						scale: [1, 1.1, 1],
+					}}
+					transition={{
+						duration: 6,
+						repeat: Infinity,
+						ease: "easeInOut",
+					}}
+					className='absolute top-0 left-1/4 w-20 h-20 gradient-primary rounded-2xl flex items-center justify-center text-primary-foreground font-bold text-xl opacity-20 shadow-2xl backdrop-blur-sm'
+				>
+					&lt;/&gt;
+				</motion.div>
+
+				<motion.div
+					animate={{
+						y: [0, 30, 0],
+						rotate: [0, -10, 0],
+						scale: [1, 1.2, 1],
+					}}
+					transition={{
+						duration: 5,
+						repeat: Infinity,
+						ease: "easeInOut",
+						delay: 2,
+					}}
+					className='absolute top-32 right-1/4 w-16 h-16 gradient-accent rounded-xl flex items-center justify-center text-accent-foreground font-bold opacity-20 shadow-2xl backdrop-blur-sm'
+				>
+					{}
+				</motion.div>
+
+				<motion.div
+					animate={{
+						y: [0, -20, 0],
+						x: [0, 20, 0],
+						rotate: [0, 15, 0],
+					}}
+					transition={{
+						duration: 7,
+						repeat: Infinity,
+						ease: "easeInOut",
+						delay: 4,
+					}}
+					className='absolute top-16 left-3/4 w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold opacity-20 shadow-2xl'
+				>
+					#
+				</motion.div>
+			</div>
 		</section>
 	);
 };

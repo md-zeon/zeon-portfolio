@@ -1,82 +1,142 @@
-import { FaDownload } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { LuDownload, LuMenu, LuX } from "react-icons/lu";
+import { motion } from "motion/react";
 
 const Navbar = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [activeSection, setActiveSection] = useState("hero");
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const sections = ["hero", "about", "skills", "education", "projects", "contact"];
+			const scrollPosition = window.scrollY + 100;
+
+			for (const section of sections) {
+				const element = document.getElementById(section);
+				if (element) {
+					const offsetTop = element.offsetTop;
+					const offsetBottom = offsetTop + element.offsetHeight;
+
+					if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+						setActiveSection(section);
+						break;
+					}
+				}
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
 	const scrollTo = (id) => {
 		const section = document.getElementById(id);
 		section?.scrollIntoView({ behavior: "smooth" });
+		setIsMenuOpen(false);
 	};
 
-	const navLinks = ["home", "about", "skills", "education", "projects", "contact"];
-	const links = (
-		<>
-			{navLinks.map((link) => {
-				const isHome = link === "home";
-				const linkId = isHome ? "#" : `#${link}`;
-				return (
-					<li key={link}>
-						<a
-							href={`${linkId}`}
-							onClick={(e) => {
-								e.preventDefault();
-								scrollTo(isHome ? window.scrollTo({ top: 0, behavior: "smooth" }) : linkId.slice(1));
-							}}
-							className='capitalize'
-						>
-							{link}
-						</a>
-					</li>
-				);
-			})}
-		</>
-	);
+	const navLinks = [
+		{ name: "home", id: "hero" },
+		{ name: "about", id: "about" },
+		{ name: "skills", id: "skills" },
+		{ name: "education", id: "education" },
+		{ name: "projects", id: "projects" },
+		{ name: "contact", id: "contact" },
+	];
+
 	return (
-		<div className='navbar max-w-7xl mx-auto px-10'>
-			<div className='navbar-start'>
-				<div className='dropdown'>
-					<div
-						tabIndex={0}
-						role='button'
-						className='btn btn-ghost pl-0 lg:hidden'
-					>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							className='h-5 w-5'
-							fill='none'
-							viewBox='0 0 24 24'
-							stroke='currentColor'
-						>
-							{" "}
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								strokeWidth='2'
-								d='M4 6h16M4 12h8m-8 6h16'
-							/>{" "}
-						</svg>
-					</div>
-					<ul
-						tabIndex={0}
-						className='menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow'
-					>
-						{links}
-					</ul>
-				</div>
-				<a
-					href='#'
-					className='text-xl text-gradient-primary font-black'
+		<nav className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+			<div className='flex justify-between items-center h-16'>
+				{/* Logo */}
+				<motion.div
+					initial={{ opacity: 0, x: -20 }}
+					animate={{ opacity: 1, x: 0 }}
+					className='text-2xl font-bold text-gradient-primary'
 				>
 					Zeon.
+				</motion.div>
+
+				{/* Desktop Navigation */}
+				<div className='hidden md:flex space-x-8'>
+					{navLinks.map((link, index) => (
+						<motion.button
+							key={link.name}
+							initial={{ opacity: 0, y: -20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: index * 0.1 }}
+							onClick={() => scrollTo(link.id)}
+							className={`capitalize font-medium transition-all duration-200 px-3 py-2 rounded-lg cursor-pointer ${
+								activeSection === link.id
+									? "text-primary bg-primary/10 border border-primary/20 shadow-sm"
+									: "hover:text-primary hover:bg-primary/5"
+							}`}
+						>
+							{link.name}
+						</motion.button>
+					))}
+				</div>
+
+				{/* Download CV Button */}
+				<a
+					href='https://drive.google.com/file/d/1ntrdlheRxfaC6SviGQSMKE48ytV-u_uQ/view?usp=sharing'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					<motion.button
+						initial={{ opacity: 0, x: 20 }}
+						animate={{ opacity: 1, x: 0 }}
+						className='hidden md:flex items-center gap-2 gradient-primary px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-200 cursor-pointer'
+					>
+						<LuDownload size={16} />
+						Download CV
+					</motion.button>
 				</a>
+
+				{/* Mobile Menu Button */}
+				<button
+					onClick={() => setIsMenuOpen(!isMenuOpen)}
+					className='md:hidden p-2 hover:text-primary transition-colors cursor-pointer'
+				>
+					{isMenuOpen ? <LuX size={24} /> : <LuMenu size={24} />}
+				</button>
 			</div>
-			<div className='navbar-center hidden lg:flex'>
-				<ul className='menu menu-horizontal px-1'>{links}</ul>
-			</div>
-			<div className='navbar-end'>
-				<a className='btn btn-primary rounded'>
-					<FaDownload /> Download CV
-				</a>
-			</div>
-		</div>
+
+			{/* Mobile Menu */}
+			{isMenuOpen && (
+				<motion.div
+					initial={{ opacity: 0, y: -20 }}
+					animate={{ opacity: 1, y: 0 }}
+					className='md:hidden absolute top-16 left-0 right-0 bg-card/95 backdrop-blur-sm border-b shadow-lg'
+				>
+					<div className='px-4 py-4 space-y-4'>
+						{navLinks.map((link) => (
+							<button
+								key={link.name}
+								onClick={() => scrollTo(link.id)}
+								className={`block cursor-pointer w-full text-left capitalize font-medium py-2 px-3 rounded-lg transition-all duration-200 ${
+									activeSection === link.id
+										? "text-primary bg-primary/10 border border-primary/20"
+										: "hover:text-primary hover:bg-primary/5"
+								}`}
+							>
+								{link.name}
+							</button>
+						))}
+
+						<a
+							href='https://drive.google.com/file/d/1ntrdlheRxfaC6SviGQSMKE48ytV-u_uQ/view?usp=sharing'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<button className='flex items-center gap-2 gradient-primary  px-4 py-2 rounded-lg w-full justify-center hover:shadow-lg transition-all duration-200 cursor-pointer'>
+								<LuDownload size={16} />
+								Download CV
+							</button>
+						</a>
+					</div>
+				</motion.div>
+			)}
+		</nav>
 	);
 };
 

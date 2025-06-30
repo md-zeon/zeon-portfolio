@@ -64,19 +64,8 @@ html {
 	);
 }
 
-.gradient-secondary {
-	background: linear-gradient(135deg, oklch(88% 0.04 262.32) 0%, oklch(92% 0.02 258.75) 100%);
-}
-
 .text-gradient-primary {
-	background: linear-gradient(135deg, oklch(67.262% 0.11366 197.067) 0%, oklch(72% 0.219 149.579) 100%);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.text-gradient-accent {
-	background: linear-gradient(135deg, oklch(76% 0.2 334.39) 0%, oklch(59% 0.25 262.32) 100%);
+	background: linear-gradient(135deg, oklch(72% 0.219 149.579) 0%, oklch(67.262% 0.11366 197.067) 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;

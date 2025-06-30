@@ -44,7 +44,7 @@ const Contact = () => {
 			id='contact'
 			className='py-20'
 		>
-			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+			<div className='px-4 sm:px-6 lg:px-8'>
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -61,8 +61,8 @@ const Contact = () => {
 					>
 						<LuMessageCircle className='w-8 h-8' />
 					</motion.div>
-					<h2 className='text-4xl lg:text-5xl font-bold text-foreground mb-4'>Let's Work Together</h2>
-					<p className='text-xl text-muted-foreground max-w-3xl mx-auto'>
+					<h2 className='text-4xl lg:text-5xl font-bold mb-4'>Let's Work Together</h2>
+					<p className='text-xl  max-w-3xl mx-auto'>
 						Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your ideas to life.
 					</p>
 				</motion.div>
@@ -76,9 +76,9 @@ const Contact = () => {
 						transition={{ duration: 0.8 }}
 						className='lg:col-span-2 space-y-8'
 					>
-						<div className=' border border-border rounded-2xl p-8'>
-							<h3 className='text-2xl font-bold text-foreground mb-6'>Get in Touch</h3>
-							<p className='text-muted-foreground leading-relaxed mb-8'>
+						<div className=' border rounded-2xl p-8'>
+							<h3 className='text-2xl font-bold mb-6'>Get in Touch</h3>
+							<p className=' leading-relaxed mb-8'>
 								I'm always open to discussing new opportunities, interesting projects, or potential collaborations. Feel
 								free to reach out if you'd like to connect!
 							</p>
@@ -94,7 +94,7 @@ const Contact = () => {
 										viewport={{ once: true }}
 										transition={{ delay: index * 0.1 }}
 										whileHover={{ x: 5, scale: 1.02 }}
-										className='flex items-center gap-4 p-4 bg-background border border-border rounded-xl hover:shadow-lg transition-all duration-300'
+										className='flex items-center gap-4 p-4 border rounded-xl hover:shadow-lg transition-all duration-300'
 									>
 										<div
 											className={`w-12 h-12 bg-gradient-to-br ${color} rounded-xl flex items-center justify-center text-white shadow-lg`}
@@ -102,8 +102,8 @@ const Contact = () => {
 											<Icon className='w-6 h-6' />
 										</div>
 										<div>
-											<h4 className='font-semibold text-foreground'>{title}</h4>
-											<p className='text-muted-foreground'>{details}</p>
+											<h4 className='font-semibold '>{title}</h4>
+											<p className=''>{details}</p>
 										</div>
 									</motion.a>
 								))}
@@ -123,7 +123,7 @@ const Contact = () => {
 											viewport={{ once: true }}
 											transition={{ delay: index * 0.1, type: "spring", stiffness: 200 }}
 											whileHover={{ scale: 1.1, y: -2 }}
-											className={`w-12 h-12 bg-muted rounded-xl flex items-center justify-center text-muted-foreground hover:text-white transition-all duration-300 ${color}`}
+											className={`w-12 h-12 bg-muted rounded-xl flex items-center justify-center  hover:text-white transition-all duration-300 ${color}`}
 										>
 											<Icon className='w-5 h-5' />
 										</motion.a>
@@ -141,8 +141,8 @@ const Contact = () => {
 						transition={{ duration: 0.8, delay: 0.2 }}
 						className='lg:col-span-3'
 					>
-						<div className=' border border-border rounded-2xl p-8'>
-							<h3 className='text-2xl font-bold text-foreground mb-6 flex items-center gap-3'>
+						<div className=' border rounded-2xl p-8'>
+							<h3 className='text-2xl font-bold mb-6 flex items-center gap-3'>
 								<div className='w-8 h-8 gradient-primary rounded-lg flex items-center justify-center'>
 									<LuSend className='w-4 h-4' />
 								</div>
@@ -162,7 +162,7 @@ const Contact = () => {
 									>
 										<label
 											htmlFor='name'
-											className='block text-sm font-medium text-foreground mb-2'
+											className='block text-sm font-medium mb-2'
 										>
 											Full Name *
 										</label>
@@ -171,7 +171,7 @@ const Contact = () => {
 											id='name'
 											name='name'
 											required
-											className='w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 text-foreground'
+											className='w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 '
 											placeholder='Your name'
 										/>
 									</motion.div>
@@ -184,7 +184,7 @@ const Contact = () => {
 									>
 										<label
 											htmlFor='email'
-											className='block text-sm font-medium text-foreground mb-2'
+											className='block text-sm font-medium mb-2'
 										>
 											Email Address *
 										</label>
@@ -193,7 +193,7 @@ const Contact = () => {
 											id='email'
 											name='email'
 											required
-											className='w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 text-foreground'
+											className='w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 '
 											placeholder='your.email@example.com'
 										/>
 									</motion.div>
@@ -207,7 +207,7 @@ const Contact = () => {
 								>
 									<label
 										htmlFor='subject'
-										className='block text-sm font-medium text-foreground mb-2'
+										className='block text-sm font-medium mb-2'
 									>
 										Subject *
 									</label>
@@ -216,7 +216,7 @@ const Contact = () => {
 										id='subject'
 										name='subject'
 										required
-										className='w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 text-foreground'
+										className='w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 '
 										placeholder="What's this about?"
 									/>
 								</motion.div>
@@ -229,7 +229,7 @@ const Contact = () => {
 								>
 									<label
 										htmlFor='message'
-										className='block text-sm font-medium text-foreground mb-2'
+										className='block text-sm font-medium mb-2'
 									>
 										Message *
 									</label>
@@ -238,7 +238,7 @@ const Contact = () => {
 										name='message'
 										required
 										rows={6}
-										className='w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 resize-none text-foreground'
+										className='w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 resize-none '
 										placeholder='Tell me about your project or just say hello!'
 									/>
 								</motion.div>
@@ -270,8 +270,8 @@ const Contact = () => {
 					className='text-center mt-16'
 				>
 					<div className='bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-2xl p-8'>
-						<h3 className='text-2xl font-bold text-foreground mb-4'>Ready to Start Your Project?</h3>
-						<p className='text-muted-foreground mb-6 max-w-2xl mx-auto'>
+						<h3 className='text-2xl font-bold mb-4'>Ready to Start Your Project?</h3>
+						<p className=' mb-6 max-w-2xl mx-auto'>
 							Let's turn your ideas into reality. I'm here to help you build something amazing.
 						</p>
 						<a
