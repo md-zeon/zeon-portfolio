@@ -8,7 +8,7 @@ const Footer = () => {
 
 	const socialLinks = [
 		{ icon: LuGithub, href: "https://github.com/md-zeon", label: "GitHub" },
-		{ icon: LuLinkedin, href: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
+		{ icon: LuLinkedin, href: "https://linkedin.com/in/zeanur-rahaman-zeon", label: "LinkedIn" },
 		{ icon: LuMail, href: "mailto:zeon.cse@email.com", label: "Email" },
 	];
 
@@ -20,7 +20,7 @@ const Footer = () => {
 	];
 
 	return (
-		<footer className='bg-base-200 text-base-content py-16'>
+		<footer className='gradient-bg text-base-content py-16'>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='grid md:grid-cols-3 gap-12'>
 					{/* Brand Section */}

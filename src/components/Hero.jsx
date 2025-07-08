@@ -46,7 +46,7 @@ const Hero = () => {
 					>
 						{[
 							{ Icon: LuGithub, href: "https://github.com/md-zeon", label: "GitHub" },
-							{ Icon: LuLinkedin, href: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
+							{ Icon: LuLinkedin, href: "https://linkedin.com/in/zeanur-rahaman-zeon", label: "LinkedIn" },
 							{ Icon: LuMail, href: "mailto:zeon.cse@email.com", label: "Email" },
 						].map(({ Icon, href, label }, index) => (
 							<motion.a
@@ -74,11 +74,10 @@ const Hero = () => {
 							href='https://drive.google.com/file/d/1ntrdlheRxfaC6SviGQSMKE48ytV-u_uQ/view?usp=sharing'
 							target='_blank'
 							rel='noopener noreferrer'
+							className='flex items-center justify-center gap-2 gradient-primary  px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-200 font-medium cursor-pointer'
 						>
-							<button className='flex items-center justify-center gap-2 gradient-primary  px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-200 font-medium cursor-pointer'>
-								<LuDownload size={16} />
-								Download CV
-							</button>
+							<LuDownload size={16} />
+							Download CV
 						</a>
 						<a
 							href='#contact'
