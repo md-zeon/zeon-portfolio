@@ -76,9 +76,9 @@ const Navbar = () => {
 					))}
 				</div>
 
-				{/* Download CV Button */}
+				{/* Download Resume Button */}
 				<a
-					href='https://drive.google.com/file/d/1ntrdlheRxfaC6SviGQSMKE48ytV-u_uQ/view?usp=sharing'
+					href='https://drive.usercontent.google.com/download?id=1imcCfIMu0fbCn2DtZ_2ITUAWlw0_vShS&export=download&authuser=0&confirm=t&uuid=48264844-8258-48f1-89d0-7051a7f1fb0b&at=AN8xHopslOajOqbidZCWt2Y9E6r2:1752026141131'
 					target='_blank'
 					rel='noopener noreferrer'
 				>
@@ -88,7 +88,7 @@ const Navbar = () => {
 						className='hidden md:flex items-center gap-2 gradient-primary px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-200 cursor-pointer'
 					>
 						<LuDownload size={16} />
-						Download CV
+						Download Resume
 					</motion.button>
 				</a>
 

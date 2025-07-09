@@ -87,7 +87,7 @@ const About = () => {
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 							onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-							className='gradient-primary  px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-200'
+							className='gradient-primary cursor-pointer px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-200'
 						>
 							Let's Connect
 						</motion.button>

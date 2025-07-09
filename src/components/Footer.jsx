@@ -73,7 +73,7 @@ const Footer = () => {
 											const element = document.getElementById(href.slice(1));
 											element?.scrollIntoView({ behavior: "smooth" });
 										}}
-										className='text-gray-400 hover:text-white transition-colors duration-200'
+										className='text-gray-400 hover:text-white transition-colors duration-200 cursor-pointer'
 									>
 										{name}
 									</button>
@@ -104,7 +104,7 @@ const Footer = () => {
 					<p>
 						© {new Date().getFullYear()} All rights reserved. Made with{" "}
 						<LuHeart className='w-4 h-4 text-primary inline' /> by
-						<span> Zeanur Rahaman Zeon</span>
+						<span className="text-white font-bold"> Zeanur Rahaman Zeon</span>
 					</p>
 
 					{/* Back to Top Button */}
