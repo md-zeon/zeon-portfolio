@@ -1,6 +1,5 @@
 import { color, motion } from "motion/react";
-import { LuMail, LuPhone, LuMapPin, LuSend, LuGithub, LuLinkedin, LuTwitter, LuMessageCircle } from "react-icons/lu";
-import { toast } from "react-toastify";
+import { LuMail, LuPhone, LuGithub, LuLinkedin, LuMessageCircle, LuX } from "react-icons/lu";
 import { FaWhatsapp } from "react-icons/fa";
 import ContactInfoCard from "../../components/Contact/ContactInfoCard";
 import SocialLinks from "../../components/Contact/SocialLinks";
@@ -8,11 +7,6 @@ import ContactForm from "../../components/Contact/ContactForm";
 import CallToAction from "../../components/Contact/CallToAction";
 
 const Contact = () => {
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		toast.success("Message sent successfully! I'll get back to you soon.");
-		e.target.reset();
-	};
 	const contactInfo = [
 		{
 			icon: LuPhone,
@@ -45,7 +39,7 @@ const Contact = () => {
 			label: "LinkedIn",
 			color: "hover:bg-blue-600",
 		},
-		{ icon: LuTwitter, href: "https://twitter.com/", label: "Twitter", color: "hover:bg-blue-400" },
+		{ icon: LuX, href: "https://x.com/developerzeon", label: "X", color: "hover:bg-blue-400" },
 	];
 
 	return (

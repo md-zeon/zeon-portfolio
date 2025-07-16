@@ -71,7 +71,7 @@ const Hero = () => {
 						className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'
 					>
 						<a
-							href='https://drive.usercontent.google.com/download?id=1imcCfIMu0fbCn2DtZ_2ITUAWlw0_vShS&export=download&authuser=0&confirm=t&uuid=48264844-8258-48f1-89d0-7051a7f1fb0b&at=AN8xHopslOajOqbidZCWt2Y9E6r2:1752026141131'
+							href='https://drive.google.com/file/d/1Za__uJBFX-tIBxtUR9oSLl732Rf1y6Ll/view?usp=sharing'
 							target='_blank'
 							rel='noopener noreferrer'
 							className='flex items-center justify-center gap-2 gradient-primary  px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-200 font-medium cursor-pointer'
