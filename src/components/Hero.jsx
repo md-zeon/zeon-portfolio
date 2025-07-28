@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { LuGithub, LuLinkedin, LuMail, LuDownload, LuArrowDown } from "react-icons/lu";
-import profileImg from "../assets/zeon.jpg";
+import profileImg from "../assets/zeanur-rahaman-zeon.png";
 
 const Hero = () => {
 	return (

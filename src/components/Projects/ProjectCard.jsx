@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { LuTag, LuCalendar, LuEye, LuChevronRight, LuGithub, LuExternalLink } from "react-icons/lu";
 
 const ProjectCard = ({ project, index, onClick }) => {
@@ -11,13 +11,16 @@ const ProjectCard = ({ project, index, onClick }) => {
 			className='bg-card/80 backdrop-blur-sm border rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group'
 		>
 			<div className='grid lg:grid-cols-2 gap-0'>
-				{/* Image */}
+				{/* Image Section */}
 				<div className='relative overflow-hidden lg:order-1'>
-					<img
-						src={project.image}
-						alt={`Screenshot of ${project.title}`}
-						className='w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-500'
-					/>
+					<div className='h-60 lg:h-auto max-h-[448px] overflow-hidden relative lg:order-1'>
+						<img
+							src={project.image}
+							alt={`Screenshot of ${project.title}`}
+							className='w-full h-full object-cover transition-transform duration-[12s] ease-in-out group-hover:translate-y-[-60%]'
+						/>
+					</div>
+
 					<div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:bg-gradient-to-r' />
 					<div className='absolute top-4 right-4 flex gap-3'>
 						<motion.a
@@ -43,7 +46,7 @@ const ProjectCard = ({ project, index, onClick }) => {
 					</div>
 				</div>
 
-				{/* Content */}
+				{/* Content Section */}
 				<div className='p-8 lg:p-12 flex flex-col justify-center lg:order-2'>
 					<div className='flex items-center gap-4 mb-4'>
 						<div className='flex items-center gap-2 gradient-primary/10 p-4 rounded-full badge badge-soft'>
@@ -56,18 +59,16 @@ const ProjectCard = ({ project, index, onClick }) => {
 						</div>
 					</div>
 
-					<h3 className='text-2xl lg:text-3xl font-bold  mb-4 group-hover:text-gradient-primary transition-colors duration-200'>
+					<h3 className='text-2xl lg:text-3xl font-bold mb-4 group-hover:text-gradient-primary transition-colors duration-200'>
 						{project.title}
 					</h3>
 
-					<p className='mb-6 leading-relaxed text-lg'>{project.description}</p>
-
-					{/* Tech Tags */}
+					<p className='mb-6 text-lg leading-relaxed text-secondary'>{project.description}</p>
 					<div className='flex flex-wrap gap-2 mb-8'>
 						{project.technologies.slice(0, 5).map((tech) => (
 							<span
 								key={tech}
-								className='px-4 py-2 bg-neutral/60  rounded-lg text-sm font-medium border hover:gradient-primary/10 hover:border-primary/20 transition-all duration-200'
+								className='px-4 py-2 bg-neutral/60 border rounded-lg text-sm font-medium hover:border-primary/30 hover:bg-primary/10 transition'
 							>
 								{tech}
 							</span>
@@ -81,7 +82,7 @@ const ProjectCard = ({ project, index, onClick }) => {
 
 					<button
 						onClick={onClick}
-						className='btn flex-1 flex items-center justify-center cursor-pointer gap-2 gradient-primary px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-200 group'
+						className='btn  flex items-center justify-center cursor-pointer gap-2 gradient-primary p-6 rounded-xl font-semibold hover:shadow-lg transition-all duration-200 group'
 					>
 						<LuEye className='w-4 h-4' />
 						<span>View Details</span>

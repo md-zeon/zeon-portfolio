@@ -3,7 +3,7 @@ const projects = [
 		title: "Taskero",
 		description:
 			"A full-stack MERN freelance task marketplace with user authentication, task management, and a dashboard.",
-		image: "https://i.ibb.co/d4LBMqHp/taskero.png",
+		image: "https://i.ibb.co/v4nw53jh/taskero-full-page.webp",
 		technologies: ["React", "Node.js", "MongoDB", "Express", "Firebase Auth", "Tailwind CSS"],
 		githubUrl: "https://github.com/md-zeon/taskero-client-side",
 		liveUrl: "https://taskero-60a20.web.app/",
@@ -32,7 +32,7 @@ const projects = [
 		title: "Histotrack",
 		description:
 			"A full-stack MERN app for tracking, sharing, and exploring historical artifacts with authentication and CRUD features.",
-		image: "https://i.ibb.co/qMZ9GT4B/histotrack.png",
+		image: "https://i.ibb.co/gLL6gpD2/histotrack-full-page.webp",
 		technologies: ["React", "Node.js", "MongoDB", "Express", "Firebase Auth", "Tailwind CSS"],
 		githubUrl: "https://github.com/md-zeon/histo-track-client",
 		liveUrl: "https://histo-track.web.app/",
@@ -61,7 +61,7 @@ const projects = [
 		title: "Subscribify",
 		description:
 			"A curated subscription box platform where users can browse, subscribe to, and manage monthly boxes with full authentication.",
-		image: "https://i.ibb.co/wrYMdxn1/subscribify.png",
+		image: "https://i.ibb.co/fYTWVf57/subscribify-full-page.webp",
 		technologies: ["React", "Firebase", "Tailwind CSS", "DaisyUI"],
 		githubUrl: "https://github.com/md-zeon/subscribify",
 		liveUrl: "https://subscription-box-22a46.web.app/",
