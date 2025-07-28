@@ -1,28 +1,26 @@
-import { motion } from "motion/react";
+import Marquee from "react-fast-marquee";
 import SkillCard from "./SkillCard";
 import skills from "../../data/skillsData";
 
-const duplicatedSkills = [...skills, ...skills];
-
-const SkillRow = ({ reverse = false, duration = 50 }) => (
-	<div className='overflow-hidden'>
-		<motion.div
-			className='flex w-max gap-6 py-4'
-			animate={{ x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
-			transition={{ repeat: Infinity, duration, ease: "linear" }}
-		>
-			{duplicatedSkills.map(({ icon: Icon, name, color }, i) => (
-				<SkillCard
-					key={i}
-					Icon={Icon}
-					name={name}
-					color={color}
-					index={i}
-					reverse={reverse}
-				/>
-			))}
-		</motion.div>
-	</div>
+const SkillRow = ({ reverse = false, speed = 50 }) => (
+	<Marquee
+		gradient={false}
+		speed={speed}
+		direction={reverse ? "right" : "left"}
+		pauseOnHover
+		className='py-3'
+	>
+		{skills.concat(skills).map(({ icon: Icon, name, color }, i) => (
+			<SkillCard
+				key={`${reverse ? "rev" : "fwd"}-${i}`}
+				Icon={Icon}
+				name={name}
+				color={color}
+				index={i}
+				reverse={reverse}
+			/>
+		))}
+	</Marquee>
 );
 
 export default SkillRow;
