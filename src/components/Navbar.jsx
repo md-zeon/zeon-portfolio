@@ -51,13 +51,13 @@ const Navbar = () => {
 				<motion.div
 					initial={{ opacity: 0, x: -20 }}
 					animate={{ opacity: 1, x: 0 }}
-					className='text-2xl font-bold text-gradient-primary'
+					className='text-2xl mr-2 font-bold text-gradient-primary'
 				>
 					Zeon.
 				</motion.div>
 
 				{/* Desktop Navigation */}
-				<div className='hidden md:flex space-x-8'>
+				<div className='hidden md:flex space-x-2 lg:space-x-8'>
 					{navLinks.map((link, index) => (
 						<motion.button
 							key={link.name}
@@ -65,7 +65,7 @@ const Navbar = () => {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: index * 0.1 }}
 							onClick={() => scrollTo(link.id)}
-							className={`capitalize font-medium transition-all duration-200 px-3 py-2 rounded-lg cursor-pointer ${
+							className={`capitalize lg:text-base md:text-sm font-medium transition-all duration-200 px-3 py-2 rounded-lg cursor-pointer ${
 								activeSection === link.id
 									? "text-primary bg-primary/10 border border-primary/20 shadow-sm"
 									: "hover:text-primary hover:bg-primary/5"
@@ -85,7 +85,7 @@ const Navbar = () => {
 					<motion.button
 						initial={{ opacity: 0, x: 20 }}
 						animate={{ opacity: 1, x: 0 }}
-						className='hidden md:flex items-center gap-2 gradient-primary px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-200 cursor-pointer'
+						className='hidden md:flex items-center md:text-sm lg:text-base md:gap-1 lg:gap-2 gradient-primary px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-200 cursor-pointer'
 					>
 						<LuDownload size={16} />
 						Download Resume
