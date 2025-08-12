@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { LuTag, LuCalendar, LuEye, LuChevronRight, LuGithub, LuExternalLink } from "react-icons/lu";
 
 const ProjectCard = ({ project, index, onClick }) => {

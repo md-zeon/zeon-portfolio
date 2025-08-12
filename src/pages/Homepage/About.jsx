@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { FaChess } from "react-icons/fa";
 import { LuCode, LuHeart, LuGamepad2, LuMusic } from "react-icons/lu";
 import SectionTitle from "../../components/SectionTitle";
 import AboutInfoCard from "../../components/About/AboutInfoCard";
 import InterestCard from "../../components/About/InterestCard";
 import QuoteBox from "../../components/About/QuoteBox";
-import ComingSoonBox from "../../components/About/ComingSoonBox";
+// import ComingSoonBox from "../../components/About/ComingSoonBox";
 import FloatingShapes from "../../components/FloatingShapes";
 import LearningAndGoalsBox from "../../components/About/LearningAndGoalsBox";
 
