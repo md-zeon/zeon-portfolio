@@ -21,7 +21,7 @@ const Projects = () => {
 	return (
 		<section
 			id='projects'
-			className='py-20 gradient-bg'
+			className='py-20 max-w-7xl mx-auto'
 		>
 			<div className='px-4 sm:px-6 lg:px-8'>
 				<motion.div

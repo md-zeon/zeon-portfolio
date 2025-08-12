@@ -26,12 +26,16 @@ const Home = () => {
 			<header className='gradient-bg border border-primary/20 sticky top-0 z-50'>
 				<Navbar />
 			</header>
-			<main className='text-base-content min-h-screen max-w-7xl mx-auto overflow-hidden'>
-				<Hero />
+			<main className='text-base-content min-h-screen overflow-hidden'>
+				<div className='gradient-bg'>
+					<Hero />
+				</div>
 				<About />
 				<Skills />
 				<Education />
-				<Projects />
+				<div className='gradient-bg'>
+					<Projects />
+				</div>
 				<Contact />
 			</main>
 			<footer>

@@ -18,6 +18,7 @@ const ProjectCard = ({ project, index, onClick }) => {
 							src={project.image}
 							alt={`Screenshot of ${project.title}`}
 							className='w-full h-full object-cover transition-transform duration-[12s] ease-in-out group-hover:translate-y-[-60%]'
+							loading="eager"
 						/>
 					</div>
 

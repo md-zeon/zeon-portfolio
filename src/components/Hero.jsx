@@ -6,7 +6,7 @@ const Hero = () => {
 	return (
 		<section
 			id='hero'
-			className='relative flex items-center justify-center lg:justify-between gradient-bg py-28 px-4 sm:px-6 lg:px-8 overflow-hidden'
+			className='relative max-w-7xl mx-auto flex items-center justify-center lg:justify-between py-28 px-4 sm:px-6 lg:px-8 overflow-hidden'
 		>
 			<div className='flex flex-col-reverse lg:flex-row lg:pl-16 items-center justify-between gap-12'>
 				{/* Left Content */}
