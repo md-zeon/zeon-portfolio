@@ -7,6 +7,7 @@ import InterestCard from "../../components/About/InterestCard";
 import QuoteBox from "../../components/About/QuoteBox";
 import ComingSoonBox from "../../components/About/ComingSoonBox";
 import FloatingShapes from "../../components/FloatingShapes";
+import LearningAndGoalsBox from "../../components/About/LearningAndGoalsBox";
 
 const About = () => {
 	const interests = [
@@ -116,9 +117,12 @@ const About = () => {
 								))}
 							</div>
 						</div>
+
+						{/* LearningAndGoalsBox */}
+						<LearningAndGoalsBox />
 						
 						{/* Coming Soon */}
-						<ComingSoonBox />
+						{/* <ComingSoonBox /> */}
 
 						{/* Quote */}
 						<QuoteBox
