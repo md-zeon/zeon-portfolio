@@ -8,10 +8,10 @@ const educationList = [
 		degree: "BSc in Computer Science & Engineering",
 		institution: "Northern University Bangladesh",
 		year: "2023 - 2027",
-		status: "6th Semester",
+		status: "7th Semester",
 		description: (
 			<>
-				Currently in <span className='font-semibold text-gradient-primary'>2nd Year</span>, actively learning full-stack
+				Currently in <span className='font-semibold text-gradient-primary'>3rd Year</span>, actively learning full-stack
 				web development, computer science fundamentals, and solving real-world problems. Expected to graduate in{" "}
 				<span className='font-semibold text-gradient-primary'>2027</span>.
 			</>
@@ -23,7 +23,7 @@ const educationList = [
 			"System Design",
 		],
 		currentActivities: [
-			"Building Personal Projects",
+			"Working on team Projects",
 			"Problem Solving Practice",
 			"Open Source Contributions",
 			"Mentoring Junior Students",
@@ -44,7 +44,7 @@ const Education = () => {
 					subtitle='My academic journey and continuous learning path'
 				/>
 
-				<div className='max-w-4xl mx-auto space-y-16'>
+				<div className='max-w-5xl mx-auto space-y-16'>
 					{educationList.map((edu, index) => (
 						<EducationCard
 							key={index}
