@@ -13,12 +13,16 @@ const ProjectCard = ({ project, index, onClick }) => {
 			<div className='grid lg:grid-cols-2 gap-0'>
 				{/* Image Section */}
 				<div className='relative overflow-hidden lg:order-1'>
-					<div className='h-60 lg:h-auto max-h-[448px] overflow-hidden relative lg:order-1'>
+					<div className={project.title !== "DevQnA" ? "sm:h-60 sm:lg:h-auto sm:max-h-[448px] overflow-hidden relative lg:order-1" : "h-full w-full"} >
 						<img
 							src={project.image}
 							alt={`Screenshot of ${project.title}`}
-							className='w-full h-full object-cover transition-transform duration-[12s] ease-in-out group-hover:translate-y-[-60%]'
-							loading="eager"
+							className={
+								project.title !== "DevQnA"
+									? "w-full h-full object-cover sm:transition-transform sm:duration-[12s] sm:ease-in-out sm:group-hover:translate-y-[-60%]"
+									: "h-full w-full object-contain"
+							}
+							loading='eager'
 						/>
 					</div>
 

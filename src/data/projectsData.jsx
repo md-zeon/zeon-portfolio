@@ -1,5 +1,44 @@
 const projects = [
 	{
+		title: "DevQnA",
+		description:
+			"A modern Q&A platform for developers with AI-powered answers, reputation system, and personalized recommendations.",
+		image: "https://i.ibb.co.com/bRdxWkKJ/DevQna.webp",
+		technologies: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS", "Shadcn UI", "Next Auth", "AI SDK"],
+		githubUrl: "https://github.com/md-zeon/DevQnA",
+		liveUrl: "https://dev-qna.vercel.app/",
+		date: "2025-10",
+		category: "Full Stack",
+		fullDescription:
+			"DevQnA is a modern Q&A platform for developers, built with Next.js and TypeScript. It features AI-powered answers, a reputation system, voting, rich text editor, and personalized recommendations for each user. The platform focuses on building a responsive, user-friendly experience while leveraging modern frontend and backend techniques.",
+		challenges: [
+			"Integrating AI-powered answer system",
+			"Building a robust reputation system to power user recommendations",
+			"Managing complex state and real-time interactions",
+			"Handling TypeScript type safety and debugging complex frontend/backend interactions",
+		],
+		improvements: [
+			"Implement user notifications for new answers and interactions",
+			"Introduce question tagging, categories, and search analytics",
+			"Enable social sharing features",
+		],
+		techStack: {
+			frontend: [
+				"Next.js",
+				"TypeScript",
+				"Tailwind CSS",
+				"Next Auth",
+				"Next Theme",
+				"Shadcn UI",
+				"React Hook Form",
+				"Lucide Icons",
+			],
+			backend: ["Next.js", "Next Auth", "Mongoose", "MongoDB", "Zod", "Bycrypt", "JSON Web Tokens"],
+			database: ["MongoDB", "Mongoose"],
+			tools: ["AI SDK", "Vercel", "GitHub"],
+		},
+	},
+	{
 		title: "MicroEarn",
 		description:
 			"A full-stack MERN platform where users earn money by completing micro-tasks, with role-based dashboards, secure payments, and coin-based economy.",
