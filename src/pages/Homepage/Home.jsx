@@ -9,6 +9,7 @@ import Footer from "../../components/Footer";
 import { ToastContainer } from "react-toastify";
 import Skills from "./Skills";
 import Contact from "./Contact";
+import ArchiveModal from "../../components/ArchiveModal";
 
 const Home = () => {
 	const { scrollYProgress } = useScroll();
@@ -42,6 +43,7 @@ const Home = () => {
 				<Footer />
 			</footer>
 			<ToastContainer />
+			<ArchiveModal />
 		</>
 	);
 };
