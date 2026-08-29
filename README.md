@@ -1,5 +1,16 @@
 # Zeon's Portfolio
 
+> ## Archived — No Longer Maintained
+>
+> This portfolio is **no longer updated or maintained**.
+> My current projects, case studies, and portfolio live at
+> **[https://zeanurrahamanzeon.vercel.app](https://zeanurrahamanzeon.vercel.app)**.
+
+<details>
+<summary>Original README (archived content below)</summary>
+
+<br>
+
 This is my personal portfolio website, showcasing my skills, projects, and experience as a web developer. The portfolio is a single-page application built with React, Vite, and Tailwind CSS.
 
 ## Features
@@ -70,3 +81,5 @@ This will create a `dist` folder with the production-ready files.
 Zeanur Rahaman Zeon - [@zeanur](https://www.linkedin.com/in/zeanur-rahaman-zeon/) - [zeanur.rahaman.zeon](https://www.linkedin.com/in/zeanur-rahaman-zeon/)
 
 Project Link: [https://github.com/md-zeon/zeon-portfolio](https://github.com/md-zeon/zeon-portfolio)
+
+</details>
